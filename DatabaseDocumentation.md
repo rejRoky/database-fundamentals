@@ -5,12 +5,12 @@
 ##### Types of Command  of sql
 
 **DDL - Data Definition Language**
-1. CREATE (__CREATE DATABASE database_name;__)
-2. DROP
-3. ALTER 
-4. TRUNCATE
-5. RENAME
-6. COMMENT
+1. CREATE *(CREATE DATABASE database_name;)*
+2. DROP *(DROP TABLE table_name;)*
+3. ALTER *(**ALTER TABLE table_name** DROP COLUMN column_name;)*
+4. TRUNCATE *(TRUNCATE TABLE  table_name;)*
+5. RENAME *(ALTER TABLE table_name **RENAME COLUMN old_name TO new_name;**)*
+6. COMMENT *(/* multi line comment another comment */)*
 
 
 **DML - Data Manipulation Language**
