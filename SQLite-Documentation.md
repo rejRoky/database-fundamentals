@@ -47,7 +47,7 @@ INSERT INTO students VALUES (1,'Abir', 'Rangpur', 30);
 INSERT INTO students VALUES (2,'Abir', 'Rangpur',  10);
 INSERT INTO students VALUES (3,'Abir', 'Rangpur', 20);
 INSERT INTO students VALUES (4,'Abir', 'Rangpur',  40);
-INSERT INTO students VALUES (5,'Mahiha', 'Rangpur',  10);
+INSERT INTO students VALUES (5,'Maliha', 'Rangpur',  10);
 INSERT INTO students VALUES (6,'Trisha', 'Rajbari',  50);
 INSERT INTO students VALUES (7,'Roky', 'Dhaka', 10);
 ```
@@ -60,7 +60,7 @@ SELECT * FROM students;
 
 ### Data Retrieval Language (Query)
 
-### SELECT and FROM 
+#### SELECT and FROM 
 /* 
 Select is using for filtering Columns
 */
@@ -71,26 +71,24 @@ SELECT * FROM students;
 SELECT * FROM dept;
 ```
 
-### DISTINCT (Unique Value)
+#### DISTINCT (Unique Value)
 ```sql
 SELECT DISTINCT name  FROM students;
 ```
 
-### WHERE 
+#### WHERE 
 -------------------------------------
-Where is using for filtering Rows
-Condition 
-< > 
-<=>
-=
-AND
-OR
-NOT
-LINK _
-BETWEEN _ AND _
-IN
-
-
+- Where is using for filtering Rows
+- Condition 
+- < > 
+- <=>
+- =
+- AND
+- OR
+- NOT
+- LINK _
+- BETWEEN _ AND _
+- IN
 ----------------------------------
 
 ```sql
@@ -123,11 +121,110 @@ SELECT * FROM students WHERE deptno BETWEEN 10 and 30;
 SELECT * FROM students WHERE deptno IN (30,10);
 ```
 
+#### ORDER BY
+```sql
+SELECT * FROM students ORDER BY name;
+```
+```sql
+SELECT * FROM students ORDER BY name DESC;
+```
+
+#### JOIN
+```sql
+SELECT * FROM 
+students,dept 
+WHERE students.deptno = dept.deptno;
+```
+```sql
+SELECT * FROM students JOIN dept ON students.deptno = dept.deptno;
+```
+```sql
+SELECT * FROM 
+students S JOIN dept D 
+ON S.deptno = D.deptno;
+```
+
+#### GROUP BY
+```sql
+SELECT city FROM 
+students GROUP BY city;
+```
+```sql
+SELECT COUNT(*),city FROM 
+students GROUP BY city;
+```
+```sql
+SELECT COUNT(*),city FROM 
+students GROUP BY city HAVING COUNT(*)>=3;
+```
 
 
 
+### Aggregate Functions 
+
+#### COUNT()
+```sql
+SELECT COUNT(*) FROM students;
+```
+```sql
+SELECT COUNT(name) FROM students;
+```
+
+#### MAX()
+```sql
+SELECT MAX(roll) FROM students;
+```
+```SQL
+SELECT MAX(roll), city FROM students GROUP BY city;
+```
+
+#### MIN()
+```sql
+SELECT MIN(roll) FROM students;
+```
+
+#### SUM()
+```sql
+SELECT SUM(roll) FROM students;
+```
+
+#### AVG()
+```sql
+SELECT AVG(roll) FROM students;
+```
+
+### Set Operations
+
+#### Union
+```sql
+SELECT * FROM students WHERE city = 'Dhaka' UNION SELECT * FROM students WHERE city = 'Rangpur';
+```
+
+#### INTERSECT
+```sql
+SELECT * FROM students WHERE city = 'Dhaka' INTERSECT SELECT * FROM students WHERE city = 'Rangpur';
+```
+#### EXCEPT
+```sql
+SELECT * FROM students WHERE city = 'Dhaka' EXCEPT SELECT * FROM students WHERE city = 'Rangpur';
+```
+
+### Sub Query
+```sql
+SELECT * FROM students WHERE city in (SELECT city FROM students WHERE name = 'Maliha');
+```
 
 
-
-
-
+### DML 
+#### INSERT
+```sql
+INSERT INTO dept VALUES (20, 'CSE');
+```
+#### DELETE
+```sql
+DELETE FROM dept dname = 'EEE';
+```
+#### UPDATE
+```sql
+UPDATE dept set  dname = 'Areo' WHERE deptno = 20;
+```
