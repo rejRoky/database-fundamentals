@@ -11,6 +11,6 @@
 ### Basic Command Practice 
 
 Create Table
-'''sql
+```sql
 create table dept (depto integer primary key not null unique, dname text);
-'''
+```
