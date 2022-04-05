@@ -10,17 +10,17 @@
 3. ALTER *(**ALTER TABLE table_name** DROP COLUMN column_name;)*
 4. TRUNCATE *(TRUNCATE TABLE  table_name;)*
 5. RENAME *(ALTER TABLE table_name **RENAME COLUMN old_name TO new_name;**)*
-6. COMMENT *(/* multi line comment another comment */)*
+6. COMMENT (__/* multi line comment another comment */__)
 
 
 **DML - Data Manipulation Language**
-1. INSERT
-2. DELETE
-3. UPDATE
+1. INSERT *(INSERT INTO table_name VALUES (value1, value2, value3,..);)*
+2. DELETE *(DELETE FROM table_name WHERE some_condition;)*
+3. UPDATE *(UPDATE table_name SET column1 = value1, column2 = value2,... WHERE condition;)*
 
 
 **DQL - Data Query Language**
-1. select 
+1. select *(SELECT * FROM table_name;)*
 2. from
 3. where 
 
