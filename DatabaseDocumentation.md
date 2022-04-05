@@ -1,7 +1,18 @@
 # Database Documentation
 
-## SQL
+### Terminology
+1. Relation
+2. Schema ( Structure of Database -  Top Row ) 
+3. Record (tuples/Rows are Record of Database)
+4. Field (Collumns are Field of Database )
+5. Primary Key (unique) (Row have No Null(None))
+6. Relationship (One Table columns are match another tables columns for Referring)
+7. Foreign Key (Two tables columns for Referring both call ) (as Primary Key of another table) (Row have No Null(None))
+8. Constrains (Primary Key,Foreign Key) (Not be null)
 
+
+
+## SQL
 ##### Types of Command  of sql
 
 **DDL - Data Definition Language**
