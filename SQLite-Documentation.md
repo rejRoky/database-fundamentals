@@ -11,6 +11,7 @@
 ### Basic Command Practice 
 Create Database 
 > .open DATABASE_NAME.db
+
 For Checking Database 
 > .databases 
 
@@ -51,10 +52,82 @@ INSERT INTO students VALUES (6,'Trisha', 'Rajbari',  50);
 INSERT INTO students VALUES (7,'Roky', 'Dhaka', 10);
 ```
 
+
 ### Query Check
 ```sql
 SELECT * FROM students;
 ``` 
+
+### Data Retrieval Language (Query)
+
+### SELECT and FROM 
+/* 
+Select is using for filtering Columns
+*/
+```sql
+SELECT * FROM students; 
+```
+```sql
+SELECT * FROM dept;
+```
+
+### DISTINCT (Unique Value)
+```sql
+SELECT DISTINCT name  FROM students;
+```
+
+### WHERE 
+-------------------------------------
+Where is using for filtering Rows
+Condition 
+< > 
+<=>
+=
+AND
+OR
+NOT
+LINK _
+BETWEEN _ AND _
+IN
+
+
+----------------------------------
+
+```sql
+SELECT * FROM students WHERE city = 'Dhaka';
+```
+```sql
+SELECT * FROM students WHERE deptno > 20;
+```
+
+#### AND OR NOT 
+```sql
+SELECT * FROM students WHERE deptno >= 10  AND city = 'Dhaka';
+```
+
+#### LIKE 
+```sql
+SELECT * FROM students WHERE name LIKE 'A%';
+```
+```sql
+SELECT * FROM students WHERE name LIKE '%y';
+```
+
+#### Between __ AND __
+```sql
+SELECT * FROM students WHERE deptno BETWEEN 10 and 30;
+```
+
+#### IN
+```sql
+SELECT * FROM students WHERE deptno IN (30,10);
+```
+
+
+
+
+
+
 
 
 
