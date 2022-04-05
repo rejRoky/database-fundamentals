@@ -5,7 +5,7 @@
 ##### Types of Command  of sql
 
 **DDL - Data Definition Language**
-1. CREATE (CREATE DATABASE database_name;)
+1. CREATE (__CREATE DATABASE database_name;__)
 2. DROP
 3. ALTER 
 4. TRUNCATE
